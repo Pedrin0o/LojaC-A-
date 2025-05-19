@@ -1,0 +1,250 @@
+/* Paleta de Cores:
+   Fundo:      #f0ebd8 (claro)
+   Header/Footer: #1d2d44 (azul escuro)
+   Sombra:     #0d1321 (detalhe escuro)
+   Menu:       #748cab (verde azulado)
+   Secundária: #3e5c76 (azul vibrante)
+*/
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;  /* Fundo do site */
+    color: #1d2d44;             /* Cor principal dos textos */
+  }
+  
+  .logo img {
+    height: 70px;         /* Aumentado de 50px para 70px */
+    width: auto;          /* Mantém proporção correta */
+    object-fit: contain;  /* Garante que a imagem não distorça */
+  }
+  
+  
+
+  /* ===== HEADER (NAVBAR) ===== */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d2d44;        /* Cor do header */
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .navbar .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #748cab;
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  .navbar .nav-links a {
+    color: #f0ebd8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #e9e9e9;
+  }
+  
+  /* ===== MENU HAMBÚRGUER ===== */
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #748cab;  /* Cor do ícone hambúrguer */
+  }
+  
+  /* ===== CONTEÚDO PRINCIPAL ===== */
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1d2d44;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #3e5c76;
+  }
+  
+  .btn {
+    background-color: #748cab;
+    color: #f0ebd8;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #3e5c76;
+  }
+  
+  /* ===== FOOTER ===== */
+  footer {
+    background-color: #1d2d44;
+    color: #f0ebd8;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+/* Garante que o body ocupe toda a altura da tela */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Envolve todo o conteúdo principal */
+  main {
+    flex: 1; /* Isso faz o main crescer e empurrar o footer para o final */
+  }
+  
+  /*LOGIN*/
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    min-height: 70vh;
+  }
+  
+  .login-box {
+    background-color: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(13, 19, 33, 0.1);
+    max-width: 400px;
+    width: 100%;
+    color: #1d2d44;
+  }
+  
+  .login-box h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1d2d44;
+  }
+  
+  .login-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .login-box input {
+    padding: 0.8rem 1rem;
+    border: 1px solid #748cab;
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    color: #1d2d44;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .login-box input:focus {
+    outline: none;
+    border-color: #3e5c76;
+    box-shadow: 0 0 8px rgba(116, 140, 171, 0.5);
+  }
+  
+  .login-box .btn {
+    padding: 0.8rem;
+    background-color: #748cab;
+    color: #f0ebd8;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-box .btn:hover {
+    background-color: #3e5c76;
+  }
+  
+  .login-box .form-links {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .login-box .form-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #3e5c76;
+  }
+  
+  .login-box .form-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* === Animação elegante entre formulários === */
+.form-container form {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .form-container form.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+    position: relative;
+  }
+  
+
+
+  /* ===== RESPONSIVIDADE ===== */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #1d2d44;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px #0d1321;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+  

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minha Loja</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        
+        <div class="logo">
+            <a href="index.html">
+              <img src="./assets/icons/Logo2.png" alt="Logo da Minha Loja" />
+            </a>
+          </div>
+          
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="camisas.html">Camisas</a></li>
+        <li><a href="calcas.html">Calças</a></li>       
+
+        <li><a href="calcados.html">Calçados</a></li>
+        <li><a href="sobre.html">Quem Somos</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </header>
+  
+    <main>
+        <!-- Banner Carrossel Full Width -->
+        <section class="banner-carousel">
+          <div class="carousel-container">
+            <img src="./assets/imagens/8.png" alt="Banner 1" class="carousel-image active" />
+            <img src="./assets/imagens/6.png" alt="Banner 2" class="carousel-image" />
+            <img src="./assets/imagens/7.png" alt="Banner 3" class="carousel-image" />
+          </div>
+          <div class="carousel-buttons">
+            <button onclick="showSlide(0)" class="btn active-btn" aria-label="Slide 1">
+                <span class="sr-only"></span>
+              </button>
+              <button onclick="showSlide(1)" class="btn" aria-label="Slide 2">
+                <span class="sr-only"></span>
+              </button>
+              <button onclick="showSlide(2)" class="btn" aria-label="Slide 3">
+                <span class="sr-only"></span>
+              </button>
+              
+          </div>
+        </section>
+      
+        <!-- Sessão de Cards de Produtos -->
+        <section class="produtos">
+          <h2>Produtos em Destaque</h2>
+          <div class="cards-container">
+            <article class="card">
+              <img src="./assets/imagens/CamisaPolo.jpg" alt="Produto 1" />
+              <h3>Camisa Oficial 2025</h3>
+              <p>Qualidade premium e elegancia de primeira.</p>
+              <button class="btn">Comprar</button>
+            </article>
+            <article class="card">
+              <img src="./assets/imagens/CalçaJeans.jpg" alt="Produto 2" />
+              <h3>Calça Jeans Confort</h3>
+              <p>Perfeita para lazer.</p>
+              <button class="btn">Comprar</button>
+            </article>
+            <article class="card">
+              <img src="./assets/imagens/Calçado1.jpg" alt="Produto 3" />
+              <h3>Tenis esportivo</h3>
+              <p>Para dominar o jogo no campo.</p>
+              <button class="btn">Comprar</button>
+            </article>
+          </div>
+        </section>
+      </main>
+      
+  
+    <!-- Footer colado no final da tela -->
+    <footer>
+      <p>&copy; 2025 Loja. Para demonstração de minhas habilidades usei de marca C&A que me inspirei todos os creditos a marca.</p>
+    </footer>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>

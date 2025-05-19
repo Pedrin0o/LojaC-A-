@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Minha Loja</title>
+  <link rel="stylesheet" href="css/login.css" />
+
+</head>
+<body>
+     <!-- Header -->
+     <header class="navbar">
+        
+        <div class="logo">
+            <a href="index.html">
+              <img src="./assets/icons/Logo2.png" alt="Logo da Minha Loja" />
+            </a>
+          </div>
+          
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="camisas.html">Camisas</a></li>
+        <li><a href="calcas.html">Calças</a></li>       
+        
+        <li><a href="calcados.html">Calçados</a></li>
+        <li><a href="sobre.html">Quem Somos</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </header>
+
+     <!-- CONTEÚDO PRINCIPAL -->
+  <main class="login-container">
+    <div class="login-box">
+      <h1 id="form-title">Login</h1>
+
+      <!-- Formulários -->
+      <form id="login-form">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Senha" required />
+        <button type="submit" class="btn">Entrar</button>
+      </form>
+
+      <form id="cadastro-form" style="display: none;">
+        <input type="text" placeholder="Nome Completo" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Senha" required />
+        <input type="password" placeholder="Confirmar Senha" required />
+        <button type="submit" class="btn">Cadastrar</button>
+      </form>
+
+      <form id="recuperar-form" style="display: none;">
+        <input type="email" placeholder="Digite seu Email" required />
+        <button type="submit" class="btn">Enviar Link de Recuperação</button>
+      </form>
+
+      <!-- Links -->
+      <div class="form-links">
+        <a href="#" id="link-login" onclick="mostrarFormulario('login'); return false;">Login</a>
+        <a href="#" id="link-cadastro" onclick="mostrarFormulario('cadastro'); return false;">Cadastre-se</a>
+        <a href="#" id="link-recuperar" onclick="mostrarFormulario('recuperar'); return false;">Esqueceu a senha?</a>
+      </div>
+    </div>
+  </main>
+
+      
+
+  <!-- Footer colado no final da tela -->
+  <footer>
+    <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

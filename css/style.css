@@ -1,0 +1,372 @@
+/* Paleta de Cores:
+   Fundo:      #f0ebd8 (claro)
+   Header/Footer: #1d2d44 (azul escuro)
+   Sombra:     #0d1321 (detalhe escuro)
+   Menu:       #748cab (verde azulado)
+   Secundária: #3e5c76 (azul vibrante)
+*/
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1d2d44;
+    line-height: 1.6;
+}
+
+/* Tipografia elegante */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+h2, h3 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ===== HEADER (NAVBAR) ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d2d44;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(13, 19, 33, 0.2);
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #748cab;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f0ebd8;
+}
+
+.nav-links a:hover:after {
+    width: 100%;
+}
+
+/* ===== MENU HAMBÚRGUER ===== */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #f0ebd8;
+    background: none;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+/* ===== BANNER CARROSSEL ===== */
+.banner-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0 0 50px; /* Espaço para os indicadores */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+.carousel-buttons {
+    position: absolute;
+    bottom: 20px; /* Posicionado logo abaixo do banner */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 5;
+}
+
+.carousel-buttons .btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #748cab;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.4s ease;
+    border: none;
+    padding: 0;
+}
+
+.carousel-buttons .btn.active-btn {
+    width: 30px;
+    background-color: #3e5c76;
+    opacity: 1;
+}
+
+.carousel-buttons .btn:hover {
+    opacity: 0.9;
+}
+
+/* ===== PRODUTOS ===== */
+.produtos {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.produtos h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #1d2d44;
+    position: relative;
+    display: inline-block;
+}
+
+.produtos h2:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #748cab;
+    bottom: -10px;
+    left: 25%;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(29, 45, 68, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(116, 140, 171, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(29, 45, 68, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover img {
+    opacity: 0.9;
+}
+
+.card h3 {
+    color: #1d2d44;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #3e5c76;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.card .btn {
+    background-color: #748cab;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.card .btn:hover {
+    background-color: #3e5c76;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(29, 45, 68, 0.2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #1d2d44;
+    color: #f0ebd8;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Layout geral */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* ===== MENU MOBILE ===== */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1d2d44;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-links li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(240, 235, 216, 0.1);
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-links a {
+        display: block;
+        width: 100%;
+    }
+    
+    .nav-links a:after {
+        display: none;
+    }
+
+    .carousel-container {
+        height: 350px;
+    }
+
+    .produtos h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .carousel-container {
+        height: 250px;
+    }
+
+    .carousel-buttons .btn.active-btn {
+        width: 25px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 280px;
+    }
+}
